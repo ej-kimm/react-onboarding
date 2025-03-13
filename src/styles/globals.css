@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+@theme {
+  /* color */
+  --color-accent: #a770bc;
+}
