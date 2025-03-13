@@ -13,6 +13,7 @@ export default function Button({
   const variantClasses = {
     default: 'px-5 py-2 bg-white text-accent font-semibold rounded-sm',
     primary: 'px-8 py-2 bg-accent text-white font-bold rounded-lg',
+    ghost: 'px-1.5 py-[1px] bg-transparent text-accent font-bold',
   }
 
   return (

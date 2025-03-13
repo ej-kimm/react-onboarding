@@ -1,11 +1,11 @@
 'use client'
 
 import useTodos from '@/hooks/useTodos'
-import type { Todo } from '@/types/todo'
+import type { Filters, Todo } from '@/types/todo'
 import { ChangeEvent } from 'react'
 import { FaTrash } from 'react-icons/fa'
 
-export default function Todo() {
+export default function Todo({ filter }: { filter: Filters }) {
   const {
     todosQuery: { data: todos = [], isPending },
     updateItem,
@@ -26,9 +26,11 @@ export default function Todo() {
 
   if (isPending) return <p>로딩중...</p>
 
+  const filtered = getFilteredItems(todos, filter)
+
   return (
     <ul className="my-5 flex-auto overflow-y-auto">
-      {todos.map(({ id, title, completed }: Todo) => (
+      {filtered.map(({ id, title, completed }: Todo) => (
         <li
           key={id}
           className="my-0.5 flex items-center justify-between px-4 py-2"
@@ -57,4 +59,18 @@ export default function Todo() {
       ))}
     </ul>
   )
+}
+
+function getFilteredItems(todos: Todo[], filter: Filters) {
+  if (filter === 'all') {
+    return todos
+  }
+  if (filter === 'active') {
+    return todos.filter((todo) => !todo.completed)
+  }
+  if (filter === 'completed') {
+    return todos.filter((todo) => todo.completed)
+  }
+
+  return todos
 }

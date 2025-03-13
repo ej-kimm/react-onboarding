@@ -16,9 +16,7 @@ export default async function TodoPage() {
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <div className="flex h-3/5 w-full max-w-[500px] flex-col overflow-hidden rounded-2xl shadow-2xl">
-        <TodoList />
-      </div>
+      <TodoList />
     </HydrationBoundary>
   )
 }
