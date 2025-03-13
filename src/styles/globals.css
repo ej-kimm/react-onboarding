@@ -3,6 +3,9 @@
 @theme {
   /* color */
   --color-bg-dark: #f5f5f5;
+  --color-bg: #fdfffd;
+  --color-gray: #d1d1d1;
+  --color-text: #22243b;
   --color-accent: #a770bc;
   --color-pink: #eeaeca;
   --color-blue: #94bbe9;

@@ -34,7 +34,7 @@ export default function AddTodo() {
       onSubmit={handleAddTodo}
     >
       <InputField
-        className="rounded-tl-lg rounded-bl-lg bg-white px-4 py-2 text-2xl"
+        className="flex-1 rounded-tl-lg rounded-bl-lg bg-white px-4 py-2 text-2xl"
         type="text"
         value={title}
         placeholder="Add Todo"
