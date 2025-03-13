@@ -3,4 +3,42 @@
 @theme {
   /* color */
   --color-accent: #a770bc;
+  --color-pink: #eeaeca;
+  --color-blue: #94bbe9;
+
+  /* animate */
+  --animate-fade-in-down: fade-in-down 1s ease-out forwards;
+  --animate-fade-in-up: fade-in-up 1s ease-out forwards;
+
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer components {
+  .bg-gradient {
+    background: radial-gradient(
+      circle,
+      var(--color-pink) 0%,
+      var(--color-blue) 100%
+    );
+  }
 }
