@@ -15,3 +15,7 @@ export async function addTodo(todo: Todo): Promise<void> {
 export async function updateTodo(todo: Partial<Todo>): Promise<void> {
   await axios.patch(`/todos/${todo.id}`, todo)
 }
+
+export async function removeTodo(id: Todo['id']): Promise<void> {
+  await axios.delete(`/todos/${id}`)
+}

@@ -1,4 +1,4 @@
-import { addTodo, getTodos, updateTodo } from '@/app/todo/actions'
+import { addTodo, getTodos, removeTodo, updateTodo } from '@/app/todo/actions'
 import type { Todo } from '@/types/todo'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 
@@ -24,5 +24,12 @@ export default function useTodos() {
     },
   })
 
-  return { todosQuery, addItem, updateItem }
+  const removeItem = useMutation({
+    mutationFn: (id: Todo['id']) => removeTodo(id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['todos'] })
+    },
+  })
+
+  return { todosQuery, addItem, updateItem, removeItem }
 }

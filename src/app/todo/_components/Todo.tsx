@@ -3,11 +3,13 @@
 import useTodos from '@/hooks/useTodos'
 import type { Todo } from '@/types/todo'
 import { ChangeEvent } from 'react'
+import { FaTrash } from 'react-icons/fa'
 
 export default function Todo() {
   const {
     todosQuery: { data: todos = [], isPending },
     updateItem,
+    removeItem,
   } = useTodos()
 
   const handleInputChange = (
@@ -16,6 +18,10 @@ export default function Todo() {
   ) => {
     const completed = e.target.checked
     updateItem.mutate({ id, completed })
+  }
+
+  const handleDelete = (id: Todo['id']) => {
+    removeItem.mutate(id)
   }
 
   if (isPending) return <p>로딩중...</p>
@@ -31,6 +37,11 @@ export default function Todo() {
             onChange={(e) => handleInputChange(e, id)}
           />
           <label htmlFor={id}>{title}</label>
+          <span>
+            <button type="button" onClick={() => handleDelete(id)}>
+              <FaTrash />
+            </button>
+          </span>
         </li>
       ))}
     </ul>
