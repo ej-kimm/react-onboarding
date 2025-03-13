@@ -2,6 +2,7 @@
 
 import useTodos from '@/hooks/useTodos'
 import type { Todo } from '@/types/todo'
+import AddTodo from './AddTodo'
 
 export default function TodoList() {
   const {
@@ -17,6 +18,7 @@ export default function TodoList() {
           <li key={item.id}>{item.title}</li>
         ))}
       </ul>
+      <AddTodo />
     </section>
   )
 }
