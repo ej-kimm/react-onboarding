@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from '@/components/common'
 import type { Filters } from '@/types/todo'
 
