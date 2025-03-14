@@ -16,3 +16,8 @@ export type InputFieldProps = {
   placeholder?: string
   onChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
+
+export type LoadingProps = {
+  size?: number
+  color?: string
+}
