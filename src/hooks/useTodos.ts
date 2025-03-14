@@ -1,4 +1,9 @@
-import { addTodo, getTodos, removeTodo, updateTodo } from '@/app/todo/actions'
+import {
+  addTodo,
+  getTodos,
+  removeTodo,
+  updateTodo,
+} from '@/app/todo/[filter]/actions'
 import type { Todo } from '@/types/todo'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { ButtonProps } from '@/types/ui'
+import type { ButtonProps } from '@/types/ui'
 import { JSX } from 'react'
 
 export default function Button({

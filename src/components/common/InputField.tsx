@@ -1,4 +1,5 @@
-import { InputFieldProps } from '@/types/ui'
+import type { InputFieldProps } from '@/types/ui'
+import { JSX } from 'react'
 
 export default function InputField({
   className,
@@ -7,7 +8,7 @@ export default function InputField({
   value,
   placeholder,
   onChange,
-}: InputFieldProps) {
+}: InputFieldProps): JSX.Element {
   return (
     <input
       type={type}

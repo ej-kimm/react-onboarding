@@ -18,7 +18,7 @@ export default function Todo({ filter }: TodoProps) {
   const filtered = getFilteredItems(todos, filter)
 
   return (
-    <ul className="my-5 flex-auto overflow-y-auto">
+    <ul>
       {filtered.map((item: Todo) => (
         <TodoItem key={item.id} item={item} />
       ))}

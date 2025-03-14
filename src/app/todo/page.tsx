@@ -1,22 +1,5 @@
-import {
-  dehydrate,
-  HydrationBoundary,
-  QueryClient,
-} from '@tanstack/react-query'
-import TodoList from './_components/TodoList'
-import { getTodos } from './actions'
+import { redirect } from 'next/navigation'
 
-export default async function TodoPage() {
-  const queryClient = new QueryClient()
-
-  await queryClient.prefetchQuery({
-    queryKey: ['todos'],
-    queryFn: getTodos,
-  })
-
-  return (
-    <HydrationBoundary state={dehydrate(queryClient)}>
-      <TodoList />
-    </HydrationBoundary>
-  )
+export default function TodoRedirect() {
+  redirect('/todo/all')
 }
