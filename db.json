@@ -1,8 +1,33 @@
 {
   "todos": [
     {
-      "id": "1",
-      "title": "첫 번째 할 일",
+      "id": "2bf57a4d-a9bd-4111-80d5-8e7f957f0c7d",
+      "title": "🍚 아침 꼭 챙겨먹기",
+      "completed": true
+    },
+    {
+      "id": "8077c18d-a1ba-4ec4-9582-bdbdcb791e70",
+      "title": "⭐️ 온보딩 과제 제출하기",
+      "completed": true
+    },
+    {
+      "id": "1e379f84-ae65-4865-8e2a-f5dbcf8f3fb7",
+      "title": "💪 저녁에 운동가기",
+      "completed": false
+    },
+    {
+      "id": "0a60b50c-fdb0-48ab-82f5-8cbeae08badf",
+      "title": "✈️ 여권 갱신하기",
+      "completed": false
+    },
+    {
+      "id": "108a0d62-3d75-408a-8eaa-c623a899207c",
+      "title": "🧹 방청소",
+      "completed": true
+    },
+    {
+      "id": "0f77dfa3-ba37-4d76-9b45-be5cf308db85",
+      "title": "✅ NetF 구독 갱신하고 결제방식 바꾸기 (~12/1)",
       "completed": false
     }
   ]
