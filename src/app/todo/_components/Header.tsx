@@ -23,9 +23,12 @@ export default function Header({
               type="button"
               variant="ghost"
               onClick={() => onFilterChange(status)}
-              className={`m-[5px] text-2xl capitalize opacity-70 transition-all delay-75 ease-in-out hover:cursor-pointer hover:opacity-100 ${filter === status && 'after:border-text opacity-100 after:block after:border'}`}
+              className={`relative m-[5px] text-2xl capitalize opacity-70 transition-all delay-75 ease-in-out hover:opacity-100 ${filter === status && 'opacity-100'}`}
             >
               {status}
+              <span
+                className={`bg-text absolute -bottom-0.5 left-0 h-0.5 transition-all duration-300 ease-in-out ${filter === status ? 'w-full' : 'w-0'}`}
+              />
             </Button>
           </li>
         ))}
