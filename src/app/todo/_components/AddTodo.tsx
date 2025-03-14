@@ -19,7 +19,7 @@ export default function AddTodo() {
 
     if (title.trim().length === 0) return
     addItem.mutate(
-      { id: uuidv4(), title, completed: false },
+      { id: uuidv4(), title: title.trim(), completed: false },
       {
         onSuccess: () => {
           setTitle('')
