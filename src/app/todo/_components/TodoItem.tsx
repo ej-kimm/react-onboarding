@@ -75,7 +75,8 @@ export default function TodoItem({ item }: TodoItemProps) {
       ) : (
         <label
           htmlFor={id}
-          className={`ml-3 flex-auto cursor-pointer text-2xl font-medium transition-all ease-in-out ${completed ? 'text-gray line-through' : 'text-text'}`}
+          title={title}
+          className={`ml-3 flex-auto cursor-pointer truncate text-2xl font-medium transition-all ease-in-out ${completed ? 'text-gray line-through' : 'text-text'}`}
         >
           {title}
         </label>
