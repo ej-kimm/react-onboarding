@@ -5,7 +5,7 @@ export type ButtonProps = {
   onClick?: () => void
   className?: string
   children: ReactNode
-  variant?: 'default' | 'primary' | 'ghost'
+  variant?: 'default' | 'primary' | 'ghost' | 'icon'
 }
 
 export type InputFieldProps = {
