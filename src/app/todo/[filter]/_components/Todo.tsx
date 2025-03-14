@@ -3,6 +3,7 @@
 import { LoadingSpinner } from '@/components/common'
 import useTodos from '@/hooks/useTodos'
 import type { Filters, Todo } from '@/types/todo'
+import { useEffect, useState } from 'react'
 import TodoItem from './TodoItem'
 
 type TodoProps = {
@@ -13,8 +14,13 @@ export default function Todo({ filter }: TodoProps) {
   const {
     todosQuery: { data: todos = [], isPending },
   } = useTodos()
+  const [isClient, setIsClient] = useState<boolean>(false)
 
-  if (isPending) return <LoadingSpinner />
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  if (!isClient || isPending) return <LoadingSpinner />
 
   const filtered = getFilteredItems(todos, filter)
 
