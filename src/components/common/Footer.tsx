@@ -17,7 +17,11 @@ export default function Footer() {
             width={44}
             height={44}
             alt="github"
-            style={{ width: '44px', height: '44px', borderRadius: '100%' }}
+            style={{
+              minWidth: '44px',
+              minHeight: '44px',
+              borderRadius: '100%',
+            }}
           />
         </Link>
 

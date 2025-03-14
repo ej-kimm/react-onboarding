@@ -55,7 +55,7 @@ export default function TodoItem({ item }: TodoItemProps) {
     <li key={id} className="my-0.5 flex items-center justify-between px-4 py-2">
       {!isEditing && (
         <input
-          className="h-6 w-6 cursor-pointer"
+          className="h-6 w-6 shrink-0 cursor-pointer"
           id={id}
           type="checkbox"
           name="status"
