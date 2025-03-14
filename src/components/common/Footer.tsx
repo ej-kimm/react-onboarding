@@ -12,29 +12,26 @@ export default function Footer() {
           href="https://github.com/ej-kimm/react-onboarding10.git"
           target="_blank"
         >
-          <Image
-            src={github}
-            width={44}
-            height={44}
-            alt="github"
-            style={{
-              minWidth: '44px',
-              minHeight: '44px',
-              borderRadius: '100%',
-            }}
-          />
+          <div className="relative h-9 w-9 overflow-hidden rounded-full sm:h-12 sm:w-12">
+            <Image
+              src={github}
+              fill
+              alt="github"
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
         </Link>
 
         <div className="flex flex-col">
           <Link
-            className="text-white hover:underline"
+            className="text-sm font-medium text-white hover:underline sm:text-lg"
             href="https://github.com/ej-kimm/react-onboarding10.git"
             target="_blank"
           >
             @ej-kimm
           </Link>
           <Link
-            className="text-white hover:underline"
+            className="text-sm font-medium text-white hover:underline sm:text-lg"
             href="mailto:dossiba0604@naver.com"
           >
             dossiba0604@naver.com

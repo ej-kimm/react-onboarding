@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-          <main className="bg-gradient accent-accent flex h-screen w-screen flex-col items-center justify-center">
+          <main className="bg-gradient accent-accent flex h-screen w-screen flex-col items-center justify-center px-6">
             {children}
           </main>
         </Providers>

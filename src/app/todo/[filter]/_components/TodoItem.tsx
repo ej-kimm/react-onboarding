@@ -52,10 +52,13 @@ export default function TodoItem({ item }: TodoItemProps) {
   }
 
   return (
-    <li key={id} className="my-0.5 flex items-center justify-between px-4 py-2">
+    <li
+      key={id}
+      className="my-0.5 flex items-center justify-between px-3.5 py-1 sm:px-4 sm:py-2"
+    >
       {!isEditing && (
         <input
-          className="h-6 w-6 shrink-0 cursor-pointer"
+          className="h-4 w-4 shrink-0 cursor-pointer sm:h-6 sm:w-6"
           id={id}
           type="checkbox"
           name="status"
@@ -70,13 +73,13 @@ export default function TodoItem({ item }: TodoItemProps) {
           value={editTitle}
           placeholder="Editing Todo..."
           onChange={handleInputChange}
-          className="focus:ring-accent bg-bg-dark mr-3 flex-auto rounded-md border px-3 py-0.5 text-xl font-medium transition-all duration-200 ease-in-out focus:ring-2"
+          className="focus:ring-accent bg-bg-dark mr-3 min-w-0 flex-auto rounded-md border px-2 py-0.5 text-base font-medium transition-all duration-200 ease-in-out focus:ring-2 sm:px-3 sm:text-xl"
         />
       ) : (
         <label
           htmlFor={id}
           title={title}
-          className={`ml-3 flex-auto cursor-pointer truncate text-2xl font-medium transition-all ease-in-out ${completed ? 'text-gray line-through' : 'text-text'}`}
+          className={`ml-2 flex-auto cursor-pointer truncate text-lg font-medium transition-all ease-in-out sm:ml-3 sm:text-2xl ${completed ? 'text-gray line-through' : 'text-text'}`}
         >
           {title}
         </label>
@@ -88,7 +91,11 @@ export default function TodoItem({ item }: TodoItemProps) {
           variant="icon"
           onClick={isEditing ? handleUpdate : toggleEditMode}
         >
-          {isEditing ? <FaCheck /> : <BsPencilFill />}
+          {isEditing ? (
+            <FaCheck className="text-sm sm:text-base" />
+          ) : (
+            <BsPencilFill className="text-[13px] sm:text-base" />
+          )}
         </Button>
         <Button
           type="button"
@@ -96,9 +103,9 @@ export default function TodoItem({ item }: TodoItemProps) {
           onClick={isEditing ? toggleEditMode : handleDelete}
         >
           {isEditing ? (
-            <IoClose strokeWidth={30} fontSize={19} />
+            <IoClose className="stroke-30 text-lg sm:text-[19px]" />
           ) : (
-            <FaTrash fontSize={13} />
+            <FaTrash className="text-xs sm:text-[13px]" />
           )}
         </Button>
       </div>

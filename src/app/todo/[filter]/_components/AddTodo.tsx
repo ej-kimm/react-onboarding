@@ -30,18 +30,18 @@ export default function AddTodo() {
 
   return (
     <form
-      className="bg-bg-dark flex w-full px-4 py-[22px]"
+      className="bg-bg-dark flex w-full p-4 sm:py-[22px]"
       onSubmit={handleAddTodo}
     >
       <InputField
-        className="flex-1 rounded-tl-lg rounded-bl-lg bg-white px-4 py-2 text-2xl"
+        className="w-full flex-auto rounded-tl-lg rounded-bl-lg bg-white px-2 text-lg sm:px-4 sm:text-2xl"
         type="text"
         value={title}
         placeholder="Add Todo"
         onChange={handleInputChange}
       />
       <Button
-        className="rounded-tl-none rounded-bl-none text-2xl transition-[filter] duration-300 ease-in-out hover:brightness-110"
+        className="rounded-tl-none rounded-bl-none text-lg transition-[filter] duration-300 ease-in-out hover:brightness-110 sm:text-2xl"
         type="submit"
         variant="primary"
       >
