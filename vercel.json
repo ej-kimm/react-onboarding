@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/todo/:filter",
+      "destination": "/todo/[filter]/page"
     }
   ]
 }
