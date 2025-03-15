@@ -7,6 +7,8 @@ import {
 import Todo from './_components/Todo'
 import { getTodos } from './actions'
 
+export const dynamic = 'force-dynamic'
+
 export default async function TodoPage({
   params,
 }: {
