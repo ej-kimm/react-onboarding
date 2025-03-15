@@ -19,7 +19,7 @@ export default function OnboardingSection() {
       <Button
         type="button"
         className="mt-4 transform transition-transform hover:scale-110 active:scale-95 sm:mt-8"
-        onClick={() => router.push('/todo/all')}
+        onClick={() => router.push('/todo')}
       >
         투두 리스트 만들기
       </Button>
